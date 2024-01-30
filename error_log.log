@@ -1,0 +1,77 @@
+2024-01-10 01:37:20,792 PyNaCl is not installed, voice will NOT be supported
+2024-01-10 01:37:20,795 logging in using static token
+2024-01-10 01:37:21,519 Shard ID None has connected to Gateway (Session ID: c5874e80dd848c6508d311a2b0c61cef).
+2024-01-10 01:37:23,661 Bot Started
+
+2024-01-10 01:37:30,097 Ignoring exception in command 'hs'
+Traceback (most recent call last):
+  File "c:\fun\highscore-discord\venv\Lib\site-packages\discord\app_commands\commands.py", line 828, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\fun\highscore-discord\src\commands.py", line 8, in highscore
+    await interaction.response.send_message(highscores.new_score(interaction))
+  File "c:\fun\highscore-discord\venv\Lib\site-packages\discord\interactions.py", line 801, in send_message
+    await adapter.create_interaction_response(
+  File "c:\fun\highscore-discord\venv\Lib\site-packages\discord\webhook\async_.py", line 221, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 50006): Cannot send an empty message
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\fun\highscore-discord\venv\Lib\site-packages\discord\app_commands\tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "c:\fun\highscore-discord\venv\Lib\site-packages\discord\app_commands\commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\fun\highscore-discord\venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'hs' raised an exception: HTTPException: 400 Bad Request (error code: 50006): Cannot send an empty message
+2024-01-10 01:38:26,376 Ignoring exception in command 'hs'
+Traceback (most recent call last):
+  File "c:\fun\highscore-discord\venv\Lib\site-packages\discord\app_commands\commands.py", line 828, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\fun\highscore-discord\src\commands.py", line 8, in highscore
+    await interaction.response.send_message(highscores.new_score(interaction))
+  File "c:\fun\highscore-discord\venv\Lib\site-packages\discord\interactions.py", line 801, in send_message
+    await adapter.create_interaction_response(
+  File "c:\fun\highscore-discord\venv\Lib\site-packages\discord\webhook\async_.py", line 221, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 50006): Cannot send an empty message
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\fun\highscore-discord\venv\Lib\site-packages\discord\app_commands\tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "c:\fun\highscore-discord\venv\Lib\site-packages\discord\app_commands\commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\fun\highscore-discord\venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'hs' raised an exception: HTTPException: 400 Bad Request (error code: 50006): Cannot send an empty message
+2024-01-10 01:38:44,934 Ignoring exception in command 'hs'
+Traceback (most recent call last):
+  File "c:\fun\highscore-discord\venv\Lib\site-packages\discord\app_commands\commands.py", line 828, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\fun\highscore-discord\src\commands.py", line 8, in highscore
+    await interaction.response.send_message(highscores.new_score(interaction))
+  File "c:\fun\highscore-discord\venv\Lib\site-packages\discord\interactions.py", line 801, in send_message
+    await adapter.create_interaction_response(
+  File "c:\fun\highscore-discord\venv\Lib\site-packages\discord\webhook\async_.py", line 221, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 50006): Cannot send an empty message
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\fun\highscore-discord\venv\Lib\site-packages\discord\app_commands\tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "c:\fun\highscore-discord\venv\Lib\site-packages\discord\app_commands\commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\fun\highscore-discord\venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'hs' raised an exception: HTTPException: 400 Bad Request (error code: 50006): Cannot send an empty message
