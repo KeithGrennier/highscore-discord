@@ -120,8 +120,8 @@ def new_score(player_code,new_score):
     output_filename= "src\output.txt"
     highscores_data = load_data(highscores_filename)
 
-    player_code = "MMT"  # Replace with the actual player code
-    new_score = 171  # Replace with the actual new score
+    player_code = "KMG"  # Replace with the actual player code
+    new_score = 170  # Replace with the actual new score
 
 
     updated_highscores_data = update_data(highscores_data, new_score, player_code)
