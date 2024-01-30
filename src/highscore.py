@@ -1,7 +1,7 @@
 import json
 from datetime import datetime
 from collections import defaultdict
-
+import helper_funcs
 def load_data(filename):
     try:
         with open(filename, 'r') as file:
@@ -15,10 +15,14 @@ def save_data(filename, data):
         json.dump(data, file, indent=2)
 
 def write_output(filename,data,funny_line):
+    response=''
     with open(filename,'w') as f:
+        reponse=funny_line
         f.write(funny_line)
         for x in data.get('Top 10',''): 
             f.write(f"{x['Rank']}. {x['Code']} {x['Score']}\n")
+            reponse+=(f"{x['Rank']}. {x['Code']} {x['Score']}\n")
+    return response
 
 def write_date():
     # Get the current date and time
@@ -109,26 +113,29 @@ def update_data(data, new_score, player_code):
 #             break
             
 
+def new_score(player_code,new_score):
+    # Example usage:
+    highscores_filename = "src\scores.json"
+    history_filename = "src\history.json"
+    output_filename= "src\output.txt"
+    highscores_data = load_data(highscores_filename)
+
+    player_code = "MMT"  # Replace with the actual player code
+    new_score = 171  # Replace with the actual new score
 
 
-# Example usage:
-highscores_filename = "src\scores.json"
-history_filename = "src\history.json"
-output_filename= "src\output.txt"
-highscores_data = load_data(highscores_filename)
+    updated_highscores_data = update_data(highscores_data, new_score, player_code)
+    save_data(highscores_filename, updated_highscores_data)
+    # print(updated_highscores_data)
+    #TODO do 
+    #TODO 'BETTER LUCK NEXT TIME IDIOT'
+    current_time=write_date()
+    funny_line=(f'Last Updated {current_time}\nTop 10\n')
+    response=write_output(output_filename,updated_highscores_data,funny_line)
+    
+    return response
 
-player_code = "MMT"  # Replace with the actual player code
-new_score = 167  # Replace with the actual new score
-
-
-updated_highscores_data = update_data(highscores_data, new_score, player_code)
-save_data(highscores_filename, updated_highscores_data)
-# print(updated_highscores_data)
-#TODO do 
-#TODO 'BETTER LUCK NEXT TIME IDIOT'
-current_time=write_date()
-funny_line=(f'Last Updated {current_time}\nTop 10\n')
-write_output(output_filename,updated_highscores_data,funny_line)
+new_score('','')
 
 # Now, save the historical data (only if the score is updated)
 # if "Historical Data" in updated_highscores_data:

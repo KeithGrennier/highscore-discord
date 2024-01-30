@@ -26,3 +26,10 @@ def format_datetime_logger(error_found,err_type) -> None:
     elif err_type=='info'.lower():
         logging.info(log_msg)
     return None
+def verify_user_two_input(user_input):
+    user_input=user_input.split(' ')
+    if (0<len(user_input)<=2) and isinstance(user_input,list):
+        # Is list between 1 and 2
+        pass
+    else:
+        response=("invalid input")
