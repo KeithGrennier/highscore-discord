@@ -116,13 +116,13 @@ def update_data(data, new_score, player_code):
 
 def new_score(player_code,new_score):
     # Example usage:
-    highscores_filename = "src\scores copy.json"
+    highscores_filename = "src\scores.json"
     history_filename = "src\history.json"
     output_filename= "src\output.txt"
     highscores_data = load_data(highscores_filename)
 
-    player_code = "KMG"  # Replace with the actual player code
-    new_score = 141  # Replace with the actual new score
+    player_code = "MMT"  # Replace with the actual player code
+    new_score = 136  # Replace with the actual new score
 
 
     updated_highscores_data = update_data(highscores_data, new_score, player_code)

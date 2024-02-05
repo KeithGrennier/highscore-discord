@@ -2,53 +2,53 @@
   "Top 10": [
     {
       "Rank": 1,
-      "Code": "KMG",
-      "Score": "141"
+      "Code": "MMT",
+      "Score": "136"
     },
     {
       "Rank": 2,
-      "Code": "MMT",
-      "Score": "146"
+      "Code": "KMG",
+      "Score": "140"
     },
     {
       "Rank": 3,
       "Code": "KMG",
-      "Score": "148"
+      "Score": "141"
     },
     {
       "Rank": 4,
       "Code": "MMT",
-      "Score": "149"
+      "Score": "146"
     },
     {
       "Rank": 5,
-      "Code": "MMT",
-      "Score": "150"
+      "Code": "KMG",
+      "Score": "148"
     },
     {
       "Rank": 6,
       "Code": "MMT",
-      "Score": "150"
+      "Score": "149"
     },
     {
       "Rank": 7,
-      "Code": "KMG",
-      "Score": "154"
+      "Code": "MMT",
+      "Score": "150"
     },
     {
       "Rank": 8,
+      "Code": "MMT",
+      "Score": "150"
+    },
+    {
+      "Rank": 9,
       "Code": "KMG",
       "Score": "154"
     },
     {
-      "Rank": 9,
-      "Code": "MMT",
-      "Score": "155"
-    },
-    {
       "Rank": 10,
-      "Code": "MMT",
-      "Score": "157"
+      "Code": "KMG",
+      "Score": "154"
     }
   ]
 }
