@@ -31,38 +31,35 @@ def write_date():
     # Format the date and time as YYYY-MM-DD HH:MM
     formatted_datetime = current_datetime.strftime('%Y-%m-%d %H:%M')
     return formatted_datetime
+
 def update_highscores(current_highscores, new_score,player_code):
+    # input from current highscores and info for potential highscore
+
+    #Iterate over current Highscores and add potential highscore
+    # Create tuple of Code,Score for the current highscore
+    # add the tupple of potential high score
+    # all scores is a tuple
+        # current_scores = [(entry['Code'], int(entry["Score"])) for entry in current_highscores]
+        # new_score_tuple = (new_score,player_code)
+        # all_scores = current_scores+new_score_tuple
     all_scores = [(entry['Code'], int(entry["Score"])) for entry in current_highscores] + [(player_code,int(new_score))]
-    sorted_scores = sorted(all_scores, key=lambda x: x[1],reverse=False)
-    
-    # # # Empty list to append scores
-    # # top_10 = []
+    # Now sort by the tuple[1] aka score, don't reverse sort by score, this creates a new list
+    # sorted scores is a list
+    sorted_scores = sorted(all_scores, key=lambda x: x[1],reverse=False) 
 
-    # # for player_name,score in sorted_scores:
-    # #     top_10.append({'Code':player_name,'Score':score})
-
-    # #     if len(top_10) == 10:
-    # #         print(top_10)
-    # #         break
-
-    # return top_10
-        # Sort the scores in descending order
-    # sorted_scores = sorted(all_scores, key=lambda x: x[1], reverse=True)
-
-    # Take the top 10 scores
+    # Take the first/top 10 scores
     top_10 = sorted_scores[:10]
+    # Rewrite scores
     update_highscores_data=[{'Code': code, 'Score': score} for code, score in top_10]
     return update_highscores_data
-"""
-    print(all_scores)
-    print(sorted_scores)
-"""
+
 def update_data(data, new_score, player_code):
     # Check if JSON has 'Top 10'
     if "Top 10" not in data:
         data["Top 10"] = []
     # Get data in 'Top 10'
     current_highscores = data["Top 10"]
+    print(type(current_highscores))
 
     # Logic to update scores
     updated_highscores = update_highscores(current_highscores, new_score,player_code)
@@ -101,6 +98,10 @@ def update_data(data, new_score, player_code):
 
     return data
 
+# def historical_file_out(output_filename,results):
+#     with open(output_filename,'w') as f:
+        
+
 # def historical_count(input_file,player_code):
 #     input_file_data=load_data(input_file)
 #     input_file_data["Historical Data"] = input_file_data.get("Historical Data", [])
@@ -115,13 +116,13 @@ def update_data(data, new_score, player_code):
 
 def new_score(player_code,new_score):
     # Example usage:
-    highscores_filename = "src\scores.json"
+    highscores_filename = "src\scores copy.json"
     history_filename = "src\history.json"
     output_filename= "src\output.txt"
     highscores_data = load_data(highscores_filename)
 
     player_code = "KMG"  # Replace with the actual player code
-    new_score = 170  # Replace with the actual new score
+    new_score = 141  # Replace with the actual new score
 
 
     updated_highscores_data = update_data(highscores_data, new_score, player_code)
